@@ -8,11 +8,14 @@ For more information, please read the official [documentation](http://kivmob.com
 
 # for installation 
 
-- Installation
+<font color="red">- Installation **FOR THIS BRANCH ONLY**</font>
 
 * You can install KivMob with the following command.
+
+  <font color="red">**FOR THIS BRANCH ONLY:**
+  download this branch cd to folder and</font>
 ```
-pip3 install https://github.com/chimenmagoodness/Kivmob-bugs-fixed-/archive/refs/heads/main.zip
+pip3 install . 
 ```
 Note: if you have the previous kivmob package installed, then you have to Uninstall it first before carring out the above command
 
@@ -50,9 +53,10 @@ KivMobApp().run()
 ```
 
 ## Find and Replace the following in your buildozer.spec file.
+<font color="red">**FOR THIS BRANCH ONLY**</font>
 
 ```
-requirements = python3, kivy, android, jnius, https://github.com/chimenmagoodness/Kivmob-bugs-fixed-/archive/refs/heads/main.zip
+requirements = python3, kivy, android, jnius, kivmob
 ...
 android.permissions = android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE
 android.api = 33
@@ -69,6 +73,12 @@ android.meta_data = com.google.android.gms.ads.APPLICATION_ID=Your APPID # Examp
 
 ```
 $ buildozer android debug deploy run
+```
+
+<span style="color:red">***FOR SLACKWARE CURRENT ONLY***</span>
+```
+buildozer -v android debug deploy run --no-compile-pyo --no-compile-cython
+
 ```
 
 ## Note Using TestIDS might cause compiling errors so use real IDS and you ads will be live
