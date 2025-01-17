@@ -1,7 +1,11 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
-    name='kivmob',
+    name='kivmob_fixed',
     version='0.2',
-    packages=[''],  # Replace with the actual package name if known
+    description='A fixed version of the kivmob library.',
+    author='Airbomber',  # ضع اسمك هنا
+    packages=find_packages(),  # يبحث تلقائيًا عن الحزم
+    include_package_data=True,  # يشمل الملفات الأخرى مثل README
+    
 )
